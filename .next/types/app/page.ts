@@ -1,4 +1,4 @@
-// File: E:\A1-最近的项目\241031-时钟项目\app\page.tsx
+// File: E:\A1-最近的项目\clocktest\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
