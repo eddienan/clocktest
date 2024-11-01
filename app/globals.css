@@ -79,3 +79,39 @@ body {
   src: url('/fonts/default/Swis721 BlkCn BT Black') format('truetype');
   font-display: swap;
 }
+
+/* 添加移动端媒体查询 */
+@media screen and (max-width: 768px) {
+  .chat-container {
+    padding: 10px;
+    height: calc(100vh - 120px);
+  }
+
+  .message-input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .chat-message {
+    padding: 8px;
+    margin: 6px 0;
+  }
+  
+  .floating-buttons {
+    bottom: 15px;
+    left: 15px;
+    transform: scale(0.9);
+  }
+}
+
+/* 添加 iPad 媒体查询 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .chat-container {
+    padding: 15px;
+    height: calc(100vh - 140px);
+  }
+  
+  .message-input {
+    padding: 10px;
+  }
+}

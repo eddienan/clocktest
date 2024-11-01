@@ -1,0 +1,71 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.hidden {
+  transform: translateX(-120%) translateY(20%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 添加触发区域样式 */
+.triggerArea {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 999;
+}
+
+/* 按钮样式 */
+.floatingButton {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floatingButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 提示标记 */
+.floatingContainer::after {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 6px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .floatingContainer {
+    bottom: 15px;
+    left: 15px;
+    transform: scale(0.9);
+  }
+  
+  .hidden {
+    transform: translateX(-120%) translateY(20%) scale(0.9);
+  }
+} 

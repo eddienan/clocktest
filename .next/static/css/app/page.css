@@ -1,0 +1,169 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/DailyQuote.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.DailyQuote_quoteContainer__3NI_A {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.DailyQuote_quoteContainer__3NI_A:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.DailyQuote_quote__Uc9FQ {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.DailyQuote_quoteText__lWBem {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.DailyQuote_quoteAuthor__UY6ig {
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: right;
+  font-style: italic;
+}
+
+/* iPad Pro */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 30px;
+    left: 30px;
+    max-width: 500px;
+    padding: 20px 24px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 18px;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 16px;
+  }
+}
+
+/* iPad Air/iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 25px;
+    left: 25px;
+    max-width: 450px;
+    padding: 18px 22px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 17px;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 15px;
+  }
+}
+
+/* 大屏手机 (iPhone Plus/Pro Max) */
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+    padding: 16px 18px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 14px;
+  }
+}
+
+/* 中等手机 (iPhone X/11/12/13) */
+@media screen and (min-width: 375px) and (max-width: 427px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    max-width: calc(100% - 30px);
+    padding: 14px 16px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 13px;
+  }
+}
+
+/* 小屏手机 (iPhone SE/mini) */
+@media screen and (max-width: 374px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+    padding: 12px 14px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 12px;
+  }
+}
+
+/* 横屏模式 */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 10px;
+    left: 10px;
+    max-width: 70%;
+    padding: 12px 16px;
+  }
+  
+  .DailyQuote_quoteText__lWBem {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .DailyQuote_quoteAuthor__UY6ig {
+    font-size: 12px;
+  }
+}
+
+/* iPad 横屏 */
+@media screen and (orientation: landscape) and (min-height: 501px) and (max-height: 834px) {
+  .DailyQuote_quoteContainer__3NI_A {
+    top: 20px;
+    left: 20px;
+    max-width: 60%;
+  }
+} 
