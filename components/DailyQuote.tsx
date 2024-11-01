@@ -29,6 +29,7 @@ const quotes = [
 export default function DailyQuote() {
   const [quote, setQuote] = useState<typeof quotes[0] | null>(null);
   const [usedIndexes, setUsedIndexes] = useState<number[]>([]);
+  const [mounted, setMounted] = useState(false);
 
   const getRandomQuote = () => {
     let availableIndexes = Array.from(Array(quotes.length).keys())
@@ -50,15 +51,18 @@ export default function DailyQuote() {
   };
 
   useEffect(() => {
+    setMounted(true);
     const today = new Date().toDateString();
     const seed = today.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
     const initialIndex = seed % quotes.length;
     
     setQuote(quotes[initialIndex]);
     setUsedIndexes([initialIndex]);
+
+    return () => setMounted(false);
   }, []);
 
-  if (!quote) return null;
+  if (!mounted || !quote) return null;
 
   return (
     <div 

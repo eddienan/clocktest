@@ -40,17 +40,19 @@
   font-style: italic;
 }
 
-/* iPad Pro */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
+/* 先处理大屏幕 */
+@media screen and (min-width: 1024px) {
   .quoteContainer {
-    top: 30px;
-    left: 30px;
-    max-width: 500px;
+    top: 40px;
+    left: 40px;
+    max-width: 600px;
     padding: 20px 24px;
   }
   
   .quoteText {
     font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 4px;
   }
   
   .quoteAuthor {
@@ -61,34 +63,16 @@
 /* iPad Air/iPad Mini */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .quoteContainer {
-    top: 25px;
-    left: 25px;
-    max-width: 450px;
-    padding: 18px 22px;
-  }
-  
-  .quoteText {
-    font-size: 17px;
-  }
-  
-  .quoteAuthor {
-    font-size: 15px;
-  }
-}
-
-/* 大屏手机 (iPhone Plus/Pro Max) */
-@media screen and (min-width: 428px) and (max-width: 767px) {
-  .quoteContainer {
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    max-width: calc(100% - 40px);
-    padding: 16px 18px;
+    top: 35px;
+    left: 35px;
+    max-width: 500px;
+    padding: 16px 20px;
   }
   
   .quoteText {
     font-size: 16px;
     line-height: 1.5;
+    margin-bottom: 4px;
   }
   
   .quoteAuthor {
@@ -96,8 +80,34 @@
   }
 }
 
-/* 中等手机 (iPhone X/11/12/13) */
-@media screen and (min-width: 375px) and (max-width: 427px) {
+/* iPad Mini 特殊处理 */
+@media screen and (min-width: 768px) and (max-width: 834px) {
+  .quoteContainer {
+    top: 30px;
+    left: 30px;
+    max-width: 450px;
+    padding: 14px 18px;
+  }
+  
+  .quoteText {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  
+  .quoteAuthor {
+    font-size: 13px;
+  }
+}
+
+/* 横屏通用处理 */
+@media screen and (orientation: landscape) {
+  .quoteContainer {
+    max-width: 45%;
+  }
+}
+
+/* 手机端处理 */
+@media screen and (max-width: 767px) {
   .quoteContainer {
     top: 15px;
     left: 15px;
@@ -116,13 +126,9 @@
   }
 }
 
-/* 小屏手机 (iPhone SE/mini) */
+/* 小屏手机 */
 @media screen and (max-width: 374px) {
   .quoteContainer {
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    max-width: calc(100% - 24px);
     padding: 12px 14px;
   }
   
@@ -135,31 +141,3 @@
     font-size: 12px;
   }
 }
-
-/* 横屏模式 */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .quoteContainer {
-    top: 10px;
-    left: 10px;
-    max-width: 70%;
-    padding: 12px 16px;
-  }
-  
-  .quoteText {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  
-  .quoteAuthor {
-    font-size: 12px;
-  }
-}
-
-/* iPad 横屏 */
-@media screen and (orientation: landscape) and (min-height: 501px) and (max-height: 834px) {
-  .quoteContainer {
-    top: 20px;
-    left: 20px;
-    max-width: 60%;
-  }
-} 
